@@ -1,0 +1,151 @@
+.vote-container {
+  // margin: -15px 10px 0 0;
+  margin-right: 10px;
+  text-align: center;
+
+  .votes {
+    &:nth-of-type(1), &:nth-of-type(3) {
+      margin: -10px 0;
+      font-size: 12px;
+    }
+  }
+
+  .vote-count {
+    text-align: center;
+    font-size: 18px;
+  }
+
+  [component="post/vote-count"] {
+    font-size: 18px;
+  }
+
+  @media (max-width: @screen-sm-max) {
+    // margin: -14px 10px 0 0;
+    margin-right: 8px;
+
+    [component="post/vote-count"] {
+      font-size: 14px;
+    }
+
+    .fa-3x {
+      font-size: 2em !important;
+    }
+  }
+}
+
+.topic {
+  .content {
+    margin-left: 0;
+    margin-top: -32px;
+    font-size: 16px;
+    line-height: 28.8px;
+
+    blockquote {
+      padding: 0 0 0 20px;
+      line-height: 25px;
+      font-size: 14px;
+      p {
+        font-size: 14px;
+      }
+    }
+    p,li {
+      line-height: 28.8px;
+      font-size: 16px;
+      margin-block-start: 22.4px;
+      margin-block-end: 22.4px;
+      margin-inline-start: 0;
+      margin-inline-end: 0;
+      margin-top: 22.4px;
+      a {
+        font-size: 16px;
+        img {
+          margin: 22.4px auto;
+          &.img-responsive {
+            display: block;
+            margin: 22.4px auto;
+          }
+        }
+      }
+    }
+    a {
+        font-size: 16px;
+        img {
+          margin: 22.4px auto;
+          &.img-responsive {
+            display: block;
+            margin: 22.4px auto;
+          }
+        }
+      }
+  }
+
+  .posts {
+    .content {
+      margin-left: 0;
+      margin-top: -32px;
+      font-size: 16px;
+      line-height: 28.8px;
+
+      blockquote {
+        padding: 0 0 0 20px;
+        line-height: 25px;
+        font-size: 14px;
+        p {
+          font-size: 14px;
+        }
+      }
+      p,li {
+        line-height: 28.8px;
+        font-size: 16px;
+        margin-block-start: 22.4px;
+        margin-block-end: 22.4px;
+        margin-inline-start: 0;
+        margin-inline-end: 0;
+        margin-top: 22.4px;
+        a {
+          font-size: 16px;
+          img {
+            margin: 22.4px auto;
+            &.img-responsive {
+              display: block;
+              margin: 22.4px auto;
+            }
+          }
+        }
+      }
+      a {
+        font-size: 16px;
+        img {
+          margin: 22.4px auto;
+          &.img-responsive {
+            display: block;
+            margin: 22.4px auto;
+          }
+        }
+      }
+    }
+    .post-header {
+      display: flex;
+      align-items: center;
+      margin-top: -14px;
+      .icon {
+        min-height: 50px;
+        min-width: 50px;
+        img {
+          height: 50px;
+          width: 50px;
+        }
+      }
+      small {
+        font-size: 18px;
+        @media (max-width: @screen-sm-max) {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+
+  [component="post/reply-count"] {
+    margin-left: 32px;
+  }
+}
