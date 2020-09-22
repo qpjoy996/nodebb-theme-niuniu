@@ -1,49 +1,128 @@
-.vote-container {
-  // margin: -15px 10px 0 0;
-  margin-right: 10px;
-  text-align: center;
+.topic {
+  position: relative;
 
-  .votes {
-    &:nth-of-type(1), &:nth-of-type(3) {
-      margin: -10px 0;
-      font-size: 12px;
+  li[component="post"]:nth-of-type(1) .vote-container {
+    position: fixed;
+    top: 100px;
+    text-align: center;
+  
+    .votes {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 95px;
+      margin-left: -95px;
+      justify-content: space-between;
+  
+      & div:nth-of-type(1), & div:nth-of-type(3) {
+        padding: 0px 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-size: 10px;
+        a span {
+          font-size: 20px;
+          color: black;
+          font-weight: bold;
+        }
+      }    
+    }
+  
+    .tooltip {
+      display: none!important;
+    }
+  
+    .vote-count {
+      text-align: center;
+      font-size: 18px;
+    }
+  
+    [component="post/vote-count"] {
+      font-size: 18px;
+    }
+  
+    @media (max-width: @screen-sm-max) {
+      // margin: -14px 10px 0 0;
+      // margin-right: 8px;
+  
+      [component="post/vote-count"] {
+        font-size: 14px;
+      }
+  
+      .fa-3x {
+        font-size: 2em !important;
+      }
     }
   }
 
-  .vote-count {
+  li[component="post"]:not(:first-of-type) .vote-container {
+    position: absolute;
+    bottom: 20px;
+    right: 100px;
     text-align: center;
-    font-size: 18px;
-  }
-
-  [component="post/vote-count"] {
-    font-size: 18px;
-  }
-
-  @media (max-width: @screen-sm-max) {
-    // margin: -14px 10px 0 0;
-    margin-right: 8px;
-
+  
+    .votes {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      // width: 240px;
+      margin-right: 5px;
+      justify-content: space-between;
+  
+      & div:nth-of-type(1), & div:nth-of-type(3) {
+        // width: 40%;
+        // max-width: 100px;
+        padding: 2px 10px;
+        // border: 1px solid #ccc;
+        // border-radius: 5px;
+        a span {
+          font-size: 12px;
+          color: black;
+          font-weight: bold;
+        }
+        a i {
+          font-size: 12px;
+        }
+      }    
+    }
+  
+    .tooltip {
+      display: none!important;
+    }
+  
+    .vote-count {
+      margin: 0;
+      text-align: center;
+      font-size: 14px;
+    }
+  
     [component="post/vote-count"] {
       font-size: 14px;
     }
-
-    .fa-3x {
-      font-size: 2em !important;
+  
+    @media (max-width: @screen-sm-max) {
+      // margin: -14px 10px 0 0;
+      // margin-right: 8px;
+  
+      [component="post/vote-count"] {
+        font-size: 14px;
+      }
+  
+      .fa-3x {
+        font-size: 2em !important;
+      }
     }
   }
-}
 
-.topic {
   .content {
     margin-left: 0;
     margin-top: -32px;
     font-size: 16px;
     line-height: 28.8px;
-    padding-left: 30px;
+    // padding-left: 30px;
 
-    @media (max-width: @screen-sm-max) {
-      padding-left: 20px;
-    }
+    // @media (max-width: @screen-sm-max) {
+    //   padding-left: 20px;
+    // }
 
     blockquote {
       padding: 0 0 0 20px;
@@ -90,10 +169,10 @@
       margin-top: -32px;
       font-size: 16px;
       line-height: 28.8px;
-      padding-left: 30px;
-      @media (max-width: @screen-sm-max) {
-        padding-left: 20px;
-      }
+      // padding-left: 30px;
+      // @media (max-width: @screen-sm-max) {
+      //   padding-left: 20px;
+      // }
 
       blockquote {
         padding: 0 0 0 20px;
@@ -143,6 +222,17 @@
         img {
           height: 50px;
           width: 50px;
+        }
+
+        @media (max-width: @screen-sm-max) {
+          .avatar {
+            width: 40px;
+            height: 40px;
+            img {
+              height: 40px;
+              width: 40px;
+            }
+          }
         }
       }
       small {

@@ -6,6 +6,9 @@
 			"hook": "filter:widgets.getAreas", "method": "defineWidgetAreas"
 		}
 	],
+	"staticDirs": {
+		"static": "./static"
+	},
 	"scripts": [
 		"lib/client.js",
 		"../nodebb-theme-persona/lib/persona.js",

@@ -1,26 +1,29 @@
+<div class="pull-left vote-container">
+	<!-- IF !reputation:disabled -->
+	<span class="votes">
+		<div>
+			<a component="post/upvote" href="#" class="<!-- IF posts.upvoted -->upvoted<!-- ENDIF posts.upvoted -->">
+				<i class="fa fa-thumbs-o-up fa-2x"></i>
+				<span>赞</span>
+			</a> 
+		</div>
+		<div class="vote-count">
+			<span component="post/vote-count" data-votes="{posts.votes}">{posts.votes}</span>
+		</div>
+		<!-- IF !downvote:disabled -->
+		<div>
+			<a component="post/downvote" href="#"
+				class="<!-- IF posts.downvoted -->downvoted<!-- ENDIF posts.downvoted -->">
+				<i class="fa fa-thumbs-o-down fa-2x"></i>
+				<span>踩</span>
+			</a>
+		</div>
+		<!-- ENDIF !downvote:disabled -->
+	</span>
+	<!-- ENDIF !reputation:disabled -->
+</div>
+
 <div class="clearfix post-header">
-	<div class="pull-left vote-container">
-		<!-- IF !reputation:disabled -->
-		<span class="votes">
-			<div>
-				<a component="post/upvote" href="#" class="<!-- IF posts.upvoted -->upvoted<!-- ENDIF posts.upvoted -->">
-					<i class="fa fa-caret-up fa-3x"></i>
-				</a>
-			</div>
-			<div class="vote-count">
-				<span component="post/vote-count" data-votes="{posts.votes}">{posts.votes}</span>
-			</div>
-			<!-- IF !downvote:disabled -->
-			<div>
-				<a component="post/downvote" href="#"
-					class="<!-- IF posts.downvoted -->downvoted<!-- ENDIF posts.downvoted -->">
-					<i class="fa fa-caret-down fa-3x"></i>
-				</a>
-			</div>
-			<!-- ENDIF !downvote:disabled -->
-		</span>
-		<!-- ENDIF !reputation:disabled -->
-	</div>
 	<div class="icon pull-left">
 		<a
 			href="<!-- IF posts.user.userslug -->{config.relative_path}/user/{posts.user.userslug}<!-- ELSE -->#<!-- ENDIF posts.user.userslug -->">
