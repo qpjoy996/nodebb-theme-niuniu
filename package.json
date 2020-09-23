@@ -1,6 +1,6 @@
 {
   "name": "nodebb-theme-niuniu",
-  "version": "1.0.13",
+  "version": "1.1.15",
   "description": "niuniu style for NodeBB",
   "main": "theme.less",
   "husky": {
