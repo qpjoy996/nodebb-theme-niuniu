@@ -14,7 +14,7 @@
       margin-left: -95px;
       justify-content: space-between;
   
-      & div:nth-of-type(1), & div:nth-of-type(3) {
+      & div:nth-of-type(1), & div:nth-last-of-type(1) {
         padding: 3px 10px;
         border: 1px solid #ccc;
         border-radius: 5px;
@@ -55,7 +55,7 @@
         margin-right: 5px;
         justify-content: space-between;
     
-        & div:nth-of-type(1), & div:nth-of-type(3) {
+        & div:nth-of-type(1), & div:nth-last-of-type(1) {
           padding: 2px 10px;
           border: none;
           a span {
@@ -98,7 +98,7 @@
       margin-right: 5px;
       justify-content: space-between;
   
-      & div:nth-of-type(1), & div:nth-of-type(3) {
+      & div:nth-of-type(1), & div:nth-last-of-type(1) {
         // width: 40%;
         // max-width: 100px;
         padding: 2px 10px;
@@ -157,7 +157,7 @@
         font-size: 14px;
       }
     }
-    p,li {
+    p,li,h1,h2,h3,h4,h5,h6,h7 {
       line-height: 28.8px;
       font-size: 16px;
       margin-block-start: 22.4px;
@@ -207,7 +207,7 @@
           font-size: 14px;
         }
       }
-      p,li {
+      p,li,h1,h2,h3,h4,h5,h6,h7 {
         line-height: 28.8px;
         font-size: 16px;
         margin-block-start: 22.4px;
@@ -284,7 +284,6 @@
   position: fixed;
   right: 40px;
   bottom: 80px;
-  // background: #ccc;
   z-index: 9999;
 
   i {

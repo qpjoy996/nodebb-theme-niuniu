@@ -90,10 +90,10 @@
 
 	<small class="pull-right">
 		<span class="post-tools">
-			<a component="post/reply" href="#"
-				class="no-select <!-- IF !privileges.topics:reply -->hidden<!-- ENDIF !privileges.topics:reply -->">[[topic:reply]]</a>
+			{# <a component="post/reply" href="#"
+				class="no-select <!-- IF !privileges.topics:reply -->hidden<!-- ENDIF !privileges.topics:reply -->">[[topic:quote]]</a> #}
 			<a component="post/quote" href="#"
-				class="no-select <!-- IF !privileges.topics:reply -->hidden<!-- ENDIF !privileges.topics:reply -->">[[topic:quote]]</a>
+				class="no-select <!-- IF !privileges.topics:reply -->hidden<!-- ENDIF !privileges.topics:reply -->">[[topic:reply]]</a>
 		</span>
 		<!-- IMPORT partials/topic/post-menu.tpl -->
 	</small>
