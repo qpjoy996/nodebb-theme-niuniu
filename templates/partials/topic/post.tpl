@@ -27,7 +27,7 @@
 	<div class="icon pull-left">
 		<a
 			href="<!-- IF posts.user.userslug -->{config.relative_path}/user/{posts.user.userslug}<!-- ELSE -->#<!-- ENDIF posts.user.userslug -->">
-			{buildAvatar(posts.user, "sm2x", true, "", "user/picture")}
+			{buildAvatarMock(posts.user, "sm2x", true, "", "user/picture")}
 			<i component="user/status" class="fa fa-circle status {posts.user.status}"
 				title="[[global:{posts.user.status}]]"></i>
 		</a>
@@ -90,8 +90,8 @@
 
 	<small class="pull-right">
 		<span class="post-tools">
-			{# <a component="post/reply" href="#"
-				class="no-select <!-- IF !privileges.topics:reply -->hidden<!-- ENDIF !privileges.topics:reply -->">[[topic:quote]]</a> #}
+			<!--a component="post/reply" href="#"
+				class="no-select < IF !privileges.topics:reply hidden--><!-- ENDIF !privileges.topics:reply >">[[topic:quote]]</a-->
 			<a component="post/quote" href="#"
 				class="no-select <!-- IF !privileges.topics:reply -->hidden<!-- ENDIF !privileges.topics:reply -->">[[topic:reply]]</a>
 		</span>
@@ -104,7 +104,7 @@
 		<span component="post/reply-count/avatars"
 			class="avatars <!-- IF posts.replies.hasMore -->hasMore<!-- ENDIF posts.replies.hasMore -->">
 			{{{each posts.replies.users}}}
-			{buildAvatar(posts.replies.users, "xs", true, "")}
+			{buildAvatarMock(posts.replies.users, "xs", true, "")}
 			{{{end}}}
 		</span>
 
