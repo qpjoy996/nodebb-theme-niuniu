@@ -88,7 +88,7 @@
 	<div component="post/signature" data-uid="{posts.user.uid}" class="post-signature">{posts.user.signature}</div>
 	<!-- ENDIF posts.user.signature -->
 
-	<small class="pull-right">
+	<small class="pull-right" style="position:absolute;top:15px;right:0;">
 		<span class="post-tools">
 			<!--a component="post/reply" href="#"
 				class="no-select < IF !privileges.topics:reply hidden--><!-- ENDIF !privileges.topics:reply >">[[topic:quote]]</a-->

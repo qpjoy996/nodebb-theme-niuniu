@@ -1,7 +1,7 @@
 {
   "name": "nodebb-theme-niuniu",
-  "version": "3.0.2",
-  "description": "niuniu style for NodeBB",
+  "version": "3.1.10",
+  "description": "Niuniu style for NodeBB",
   "main": "theme.less",
   "husky": {
     "hooks": {

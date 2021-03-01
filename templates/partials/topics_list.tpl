@@ -34,13 +34,15 @@
 				<i component="topic/moved" class="fa fa-arrow-circle-right <!-- IF !topics.oldCid -->hide<!-- ENDIF !topics.oldCid -->" title="[[topic:moved]]"></i>
 				{{{each icons}}}@value{{{end}}}
 
-				<!-- IF !topics.noAnchor -->
+				<!-- IF !topics.noAnchor -->				
 				{topics.titleSolver}
+				{topics.essence}
 				<a href="{config.relative_path}/topic/{topics.slug}<!-- IF topics.bookmark -->/{topics.bookmark}<!-- ENDIF topics.bookmark -->" itemprop="url">				
 				{topics.title}
 				</a><br />
 				<!-- ELSE -->
 				{topics.titleSolver}
+				{topics.essence}
 				<span>
 				{topics.title}
 				</span><br />
@@ -115,6 +117,7 @@
 				<!-- ENDIF topics.unreplied -->
 			</div>
 		</div>
+		{topics.christmas}
 	</li>
 	{{{end}}}
 </ul>
