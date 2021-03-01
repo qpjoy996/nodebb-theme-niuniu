@@ -34,7 +34,7 @@
 
 ### 修改一些信息
 
-修改 `package.json` 中相关的创作信息：
+修改了 `package.json` 中相关的创作信息：
 
 ``` json
 "author": {
