@@ -37,7 +37,7 @@
 				<!-- IF !topics.noAnchor -->				
 				{topics.titleSolver}
 				{topics.essence}
-				<a href="{config.relative_path}/topic/{topics.slug}<!-- IF topics.bookmark -->/{topics.bookmark}<!-- ENDIF topics.bookmark -->" itemprop="url">				
+				<a href="{config.relative_path}/topic/{topics.slug}<!-- IF topics.bookmark --><!-- ENDIF topics.bookmark -->" itemprop="url">				
 				{topics.title}
 				</a><br />
 				<!-- ELSE -->

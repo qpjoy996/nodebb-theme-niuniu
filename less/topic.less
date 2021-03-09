@@ -1,237 +1,113 @@
 .topic {
   position: relative;
+  >.post-bar{
+    border-bottom: none;
+  }
+  .alkun-hide-toPid{
+    display: none;
+  }
+  .posts .post-bar{
+    padding-bottom: 10px;
+    border-bottom: 1px solid #eee;
+  }
 
-  li[component="post"]:nth-of-type(1)  {
-    .vote-container {
-      position: fixed;
-      top: 130px;
-      text-align: center;
-    
-      .votes {
+  .posts{
+    li[component="post"]{
+      .alkun-item.alkun-views {
+        display: none;
+      }
+      .alkun-topic-reply-btn{
+        display: none;
+      }
+       .alkun-post-reply-btn{
+        display: block;
+      }
+      .post-footer div[component="post/replies"] {
+        .alkun-hide-toPid{
+          display: block;
+        }
+        .alkun-item.alkun-views {
+          display: none;
+        }
+        .alkun-topic-reply-btn{
+          display: none;
+        }
+         .alkun-post-reply-btn{
+          display: block;
+        }
+      }
+
+    }
+    // 主题帖的范围
+    li[component="post"]:first-child {
+      border-bottom: none;
+      .alkun-item.alkun-views{
+        display: block;
+      }
+      .alkun-topic-reply-btn{
+        display: block;
+      }
+       .alkun-post-reply-btn{
+        display: none;
+      }
+      .alkun-pullright{
+        display: none;
+      }
+    }
+  }
+
+
+  .alkun-container{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    .alkun-item{
+      margin-right: 24px;
+      a.alkun-btn{
+        color: #6c757d;
         display: flex;
-        flex-direction: column;
-        align-items: center;
-        width: 95px;
-        margin-left: -95px;
-        justify-content: space-between;
-    
-        & div:nth-of-type(1), & div:nth-last-of-type(1) {
-          padding: 3px 10px;
-          border: 1px solid #ccc;
-          border-radius: 5px;
-          font-size: 10px;
-          a span {
-            font-size: 14px;
-            color: black;
-            font-weight: bold;
+        justify-items: center;
+        .alkun-item-count{
+          font-size: 18px;
+          vertical-align: super;
+          margin-left: 4px;
+        }
+        .fa-thumbs-up{
+          display: none;
+        }
+        .fa-thumbs-o-up{
+          display: block;
+        }
+        .fa-thumbs-down{
+          display: none;
+        }
+        .fa-thumbs-o-down{
+          display: block;
+        }
+        &.upvoted{
+          .fa-thumbs-up{
+            display: block;
+          }
+          .fa-thumbs-o-up{
+            display: none;
           }
         }
-      }
-    
-      .tooltip {
-        display: none!important;
-      }
-    
-      .vote-count {
-        text-align: center;
-        font-size: 18px;
-      }
-    
-      [component="post/vote-count"] {
-        font-size: 18px;
-      }
-    
-      @media (max-width: @screen-sm-max) {
-        position: absolute;
-        top: 15px;
-        bottom: 20px;
-        right: 110px;
-        text-align: center;
-      
-        .votes {
-          display: flex;
-          flex-direction: row;
-          align-items: center;
-          width: unset;
-          margin-right: 5px;
-          justify-content: space-between;
-      
-          & div:nth-of-type(1), & div:nth-last-of-type(1) {
-            padding: 2px 10px;
-            border: none;
-            a span {
-              font-size: 12px;
-              color: black;
-              font-weight: bold;
-            }
-            a i {
-              font-size: 12px;
-            }
+        &.downvoted{
+          .fa-thumbs-down{
+            display: block;
+          }
+          .fa-thumbs-o-down{
+            display: none;
           }
         }
-      
-        .tooltip {
-          display: none!important;
-        }
-      
-        .vote-count {
-          margin: 0;
-          text-align: center;
-          font-size: 14px;
-        }
-      
-        [component="post/vote-count"] {
-          font-size: 14px;
-        }
+
       }
     }
-    [component="post/replies"] .vote-container{
-      position: absolute;
-      top: 15px;
-      bottom: 20px;
-      right: 110px;
-      text-align: center;
-
-      .votes {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        width: unset;
-        margin-right: 5px;
-        justify-content: space-between;
-    
-        & div:nth-of-type(1), & div:nth-last-of-type(1) {
-          padding: 2px 10px;
-          border: none;
-          a span {
-            font-size: 12px;
-            color: black;
-            font-weight: bold;
-          }
-          a i {
-            font-size: 12px;
-          }
-        }
-      }
-    
-      .tooltip {
-        display: none!important;
-      }
-    
-      .vote-count {
-        margin: 0;
-        text-align: center;
-        font-size: 14px;
-      }
-    
-      [component="post/vote-count"] {
-        font-size: 14px;
-      }
+    .alkun-item.alkun-views{
+      display: none;
     }
   }
 
-  [component="post/replies"] li[component="post"]:nth-of-type(1) .vote-container{
-    position: absolute;
-    top: 15px;
-    bottom: 20px;
-    right: 110px;
-    text-align: center;
-
-    .votes {
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      width: unset;
-      margin-right: 5px;
-      justify-content: space-between;
-  
-      & div:nth-of-type(1), & div:nth-last-of-type(1) {
-        padding: 2px 10px;
-        border: none;
-        a span {
-          font-size: 12px;
-          color: black;
-          font-weight: bold;
-        }
-        a i {
-          font-size: 12px;
-        }
-      }
-    }
-  
-    .tooltip {
-      display: none!important;
-    }
-  
-    .vote-count {
-      margin: 0;
-      text-align: center;
-      font-size: 14px;
-    }
-  
-    [component="post/vote-count"] {
-      font-size: 14px;
-    }
-  }
-
-  li[component="post"]:not(:first-of-type) .vote-container {
-    position: absolute;
-    top: 15px;
-    bottom: 19px;
-    right: 110px;
-    text-align: center;
-  
-    .votes {
-      display: flex;
-      align-items: center;
-      // width: 240px;
-      margin-right: 5px;
-      justify-content: space-between;
-  
-      & div:nth-of-type(1), & div:nth-last-of-type(1) {
-        // width: 40%;
-        // max-width: 100px;
-        padding: 2px 10px;
-        // border: 1px solid #ccc;
-        // border-radius: 5px;
-        a span {
-          font-size: 12px;
-          color: black;
-          font-weight: bold;
-        }
-        a i {
-          font-size: 12px;
-        }
-      }    
-    }
-  
-    .tooltip {
-      display: none!important;
-    }
-  
-    .vote-count {
-      margin: 0;
-      text-align: center;
-      font-size: 14px;
-    }
-  
-    [component="post/vote-count"] {
-      font-size: 14px;
-    }
-  
-    // @media (max-width: @screen-sm-max) {
-    //   // margin: -14px 10px 0 0;
-    //   // margin-right: 8px;
-  
-    //   [component="post/vote-count"] {
-    //     font-size: 14px;
-    //   }
-  
-    //   .fa-3x {
-    //     font-size: 2em !important;
-    //   }
-    // }
-  }
 
   .content {
     margin-left: 0;
@@ -305,7 +181,9 @@
         }
       }
   }
-
+  li[component="post"]{
+    border-bottom: 1px solid #eee;
+  }
   .posts {
     .content {
       margin-left: 0;
@@ -385,7 +263,6 @@
     .post-header {
       display: flex;
       align-items: center;
-      margin-top: -14px;
       .icon {
         min-height: 50px;
         min-width: 50px;
@@ -417,7 +294,8 @@
       }
     }
 
-    .post-footer {  
+    .post-footer { 
+      padding-bottom: 10px; 
         img {
           &.img-responsive {
             max-height: 200px;
@@ -428,6 +306,21 @@
 
   [component="post/reply-count"] {
     margin-left: 32px;
+  }
+  .alkun-stats{
+    span{
+      display: inline-block;
+    }
+  }
+  .alkun-sort{
+    .btn {
+      padding: 2px 10px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 150px;
+      border-radius: 20px;
+    }
   }
 }
 
